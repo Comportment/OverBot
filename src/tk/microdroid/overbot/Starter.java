@@ -6,13 +6,7 @@ public class Starter {
 	}
 	
 	public void main() {
-		Core.botServer = "irc.subluminal.net";
-		Core.botPort = 6667;
-		Core.botNick = "OverBot";
-		Core.botUsername = "OverBot";
-		Core.botRealname = "OverCoder";
-		Core.botSuperuser = "OverCoder";
-		Core core = new Core();
+		Core core = new Core("irc.subluminal.net", "OverBot", "OverCoder", "OverCoder");
 		core.connect();
 	}
 }
