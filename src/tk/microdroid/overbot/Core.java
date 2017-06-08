@@ -7,16 +7,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Core {
-	static String botServer = "";
-	static int botPort = 6667;
-	static String botNick = "";
-	static String botRealname = "";
-	static String botUsername = "";
-	static String botSuperuser = "";
+	String botServer = "";
+	int botPort = 6667;
+	String botNick = "";
+	String botRealname = "";
+	String botUsername = "";
+	String botSuperuser = "";
 
 	static boolean isConnected = false;
 	static List<String> queue = new ArrayList<String>();
 
+	public Core(String botServer, String botNick, String botRealname, String botUsername, String botSuperuser) {
+		this.botServer = botServer;
+		this.botNick = botnick;
+		this.botRealname = botRealname;
+		this.botUsername = botUsername;
+		this.botSuperuser = botSuperuser;
+	}
+	
 	public void connect() throws Exception {
 		Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
 			@Override
